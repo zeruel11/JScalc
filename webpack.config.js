@@ -18,7 +18,7 @@ module.exports = {
         path.resolve(__dirname, 'node_modules'),
         path.resolve(__dirname, 'bower_components')
       ],
-      use: [{ loader: 'babel-loader' }],
+      use: [{ loader: 'babel-loader' }]
       // query: {
       //   presets: ['es2015']
       // }
@@ -27,9 +27,9 @@ module.exports = {
       test: /\.css$/,
       use: [{
         loader: 'style-loader'
-      },{
+      }, {
         loader: 'css-loader'
-      }],
+      }]
     }]
   },
   plugins: [
@@ -49,4 +49,4 @@ module.exports = {
     port: 3000,
     open: true
   }
-};
+}
