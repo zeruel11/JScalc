@@ -8,5 +8,6 @@ module.exports = webpackMerge(common, {
     host: 'localhost',
     port: 3000,
     open: true
-  }
+  },
+  devtool: 'source-map'
 })

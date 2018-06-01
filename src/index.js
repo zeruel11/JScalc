@@ -18,14 +18,13 @@ const calculate = (n1, operator, n2) => {
   return result
 }
 
-const previousKeyType = calculator.dataset.previousKeyType
-
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
     const key = e.target
     const action = key.dataset.action
     const keyContent = key.textContent
     const displayedNum = display.textContent
+    const previousKeyType = calculator.dataset.previousKeyType
 
     // remove operator visual state
     Array.from(key.parentNode.children)
@@ -38,6 +37,7 @@ keys.addEventListener('click', e => {
       } else {
         display.textContent = displayedNum + keyContent
       }
+      calculator.dataset.previousKeyType = 'number'
       // console.log('number key!')
     }
     if (
@@ -56,6 +56,7 @@ keys.addEventListener('click', e => {
       if (!displayedNum.includes('.')) {
         display.textContent = displayedNum + '.'
       }
+      calculator.dataset.previousKeyType = 'decimal'
     }
     if (action === 'clear') {
       console.log('clear key!')
@@ -65,6 +66,7 @@ keys.addEventListener('click', e => {
       const operator = calculator.dataset.operator
       const secondValue = displayedNum
       display.textContent = calculate(firstValue, operator, secondValue)
+      calculator.dataset.previousKeyType = 'calculate'
       // console.log('equal key!')
     }
   }

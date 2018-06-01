@@ -5,7 +5,7 @@ const path = require('path')
 module.exports = {
   entry: path.join(__dirname, 'src', 'index'),
   output: {
-    filename: '[name].[hash].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -19,9 +19,6 @@ module.exports = {
         path.resolve(__dirname, 'bower_components')
       ],
       use: [{ loader: 'babel-loader' }]
-      // query: {
-      //   presets: ['es2015']
-      // }
     },
     {
       test: /\.css$/,
@@ -41,5 +38,4 @@ module.exports = {
   // resolve: {
   //   extensions: ['.json', '.js', '.jsx', '.css']
   // },
-  // devtool: 'source-map',
 }
