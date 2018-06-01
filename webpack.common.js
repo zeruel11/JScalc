@@ -37,16 +37,9 @@ module.exports = {
       template: 'index.html'
     }),
     new CleanWebpackPlugin(['dist'])
-  ],
+  ]
   // resolve: {
   //   extensions: ['.json', '.js', '.jsx', '.css']
   // },
   // devtool: 'source-map',
-  mode: 'development',
-  devServer: {
-    // publicPath: path.join('/dist/')
-    host: 'localhost',
-    port: 3000,
-    open: true
-  }
 }

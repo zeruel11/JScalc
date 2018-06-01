@@ -1,0 +1,5 @@
+{
+    "npm-intellisense.importES6": false,
+    "npm-intellisense.recursivePackageJsonLookup": false,
+    "npm-intellisense.scanDevDependencies": true
+}
