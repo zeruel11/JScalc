@@ -53,7 +53,9 @@ keys.addEventListener('click', e => {
       calculator.dataset.operator = action
     }
     if (action === 'decimal') {
-      display.textContent = displayedNum + '.'
+      if (!displayedNum.includes('.')) {
+        display.textContent = displayedNum + '.'
+      }
     }
     if (action === 'clear') {
       console.log('clear key!')
