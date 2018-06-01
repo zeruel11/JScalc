@@ -18,20 +18,21 @@ const calculate = (n1, operator, n2) => {
   return result
 }
 
+const previousKeyType = calculator.dataset.previousKeyType
+
 keys.addEventListener('click', e => {
   if (e.target.matches('button')) {
     const key = e.target
     const action = key.dataset.action
     const keyContent = key.textContent
     const displayedNum = display.textContent
-    const previousKeyType = calculator.dataset.previousKeyType
 
     // remove operator visual state
     Array.from(key.parentNode.children)
       .forEach(k => k.classList.remove('is-depressed'))
 
     if (!action) {
-      calculator.dataset.previousKeyType = ''
+      // calculator.dataset.previousKeyType = ''
       if (displayedNum === '0' || previousKeyType === 'operator') {
         display.textContent = keyContent
       } else {
