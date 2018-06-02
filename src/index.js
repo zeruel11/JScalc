@@ -27,8 +27,9 @@ keys.addEventListener('click', e => {
     const previousKeyType = calculator.dataset.previousKeyType
 
     // remove operator visual state
-    Array.from(key.parentNode.children)
-      .forEach(k => k.classList.remove('is-depressed'))
+    Array.from(key.parentNode.children).forEach(k =>
+      k.classList.remove('is-depressed')
+    )
 
     if (!action) {
       if (displayedNum === '0' || previousKeyType === 'operator') {

@@ -1,21 +1,19 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch via NPM",
-            "runtimeExecutable": "npm",
-            // "address": "localhost",
-            "program": "${workspaceRoot}/src/index.js",
-            "outFiles": [
-                "${workspaceRoot}/dist/bundle.js"
-            ],
-            "sourceMaps": true,
-            "useWSL": true
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch via NPM",
+      "runtimeExecutable": "npm",
+      // "address": "localhost",
+      "program": "${workspaceFolder}/src/index.js",
+      "outFiles": ["${workspaceFolder}/dist/bundle.js"],
+      "sourceMaps": true,
+      "useWSL": true
+    }
+  ]
 }
